@@ -1,0 +1,50 @@
+html, body, #leafletMap {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+html, body{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+	overflow: hidden;
+}
+.leafletPanelArea{
+	position: absolute;
+	z-index: 1000;
+}
+	.leftPanelArea{
+		top: 80px;
+		left: 10px;
+	}
+	.rightPanelArea{
+		top: 0px;
+		right: 10px;
+		text-align: right;
+	}
+		.leafletPanel{
+			display: inline-block;
+			width: 170px;
+			margin-top: 10px;
+			padding: 4px;
+			background-color: #fff;
+			border-radius: 4px;
+			background-clip: padding-box;
+			border: 3px solid rgba(255, 255, 255, 0.5);
+			opacity: 0.7;
+			transition: 300ms;
+		}
+		.leafletPanel:hover{
+			opacity: 1;
+		}
+		.leafletPanelTitle {
+			margin: 5px 0;
+			color: #999;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.rightPanelArea .leafletPanel{
+			text-align: left;
+		}
