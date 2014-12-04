@@ -7,6 +7,23 @@
     </head>
     <body>
     	<div id="leafletMap"></div>
+    	<div class="leafletPanelArea leafletSearchWr">
+    		<div class="leafletSearchForm">
+    			<div class="clearBtnWr">
+    				<button class="miniBtn clearBtn" title="Очистить"></button>
+    			</div>
+    			<div class="leafletSearchFieldWr">
+    				<input type="text" class="leafletSearchField" placeholder="Найти" />
+    			</div>
+    		</div>
+    		<div class="leafletPanelArea leafletSearchResults">
+    			<div class="leafletSearchResultsWr">
+    				<div class="leafletPreloaderWr"></div>
+    				<div class="leafletSearchResultsItem">
+	    			</div>
+    			</div>
+    		</div>
+    	</div>
     	<div class="leafletPanelArea leftPanelArea">
 			<div class="leafletPanel" style="width: 200px;">
 				<div class="leafletPanelTitle">
@@ -50,5 +67,7 @@
     	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     	<script src="js/leafletInit.js"></script>
     	<!-- END Simple Leaflet include -->
+
+    	<script type="text/javascript" src="js/simpe.js"></script>
     </body>
 </html>
