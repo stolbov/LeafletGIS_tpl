@@ -1,54 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Simple template for Leaflet-GIS</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/app.css">
-    </head>
-    <body>
-    	<div id="leafletMap"></div>
-    	<div class="leafletPanelArea leftPanelArea">
-			<div class="leafletPanel" style="width: 200px;">
-				<div class="leafletPanelTitle">
-					I Panel Title
+	<head>
+		<title>Simple template for Leaflet-GIS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<div class="leftBlock Block">
+		</div>
+		<div class="blockSplitter Block"></div>
+		<div class="rightBlock Block">
+			<div id="leafletMap"></div>
+			<div class="leafletPanelArea leafletSearchWr"><!-- add class "active" for open full search panel -->
+				<div class="leafletSearchForm">
+					<div class="clearBtnWr">
+						<button class="miniBtn clearBtn" title="Очистить"></button>
+					</div>
+					<div class="leafletSearchFieldWr">
+						<input type="text" class="leafletSearchField" placeholder="Найти" />
+					</div>
 				</div>
-				<div class="leafletPanelContent">
-					-- <br> left <br> panel <br> content <br> here <br> --
-				</div>
-			</div>
-			<div></div>
-			<div class="leafletPanel">
-				<div class="leafletPanelTitle">
-					II Panel Title
-				</div>
-				<div class="leafletPanelContent">
-					-- <br> other <br> left <br> panel <br> content <br> here <br> --
-				</div>
-			</div>
-    	</div>	
-    	<div class="leafletPanelArea rightPanelArea">
-			<div class="leafletPanel">
-				<div class="leafletPanelTitle">
-					III Panel Title
-				</div>
-				<div class="leafletPanelContent">
-					-- <br> right <br> panel <br> content <br> here <br> --
+				<div class="leafletPanelArea leafletSearchResults">
+					<div class="leafletSearchResultsWr">
+						<div class="leafletPreloaderWr"></div>
+						<div class="leafletSearchResultsItem">
+						</div>
+					</div>
 				</div>
 			</div>
-			<div></div>
-			<div class="leafletPanel">
-				<div class="leafletPanelTitle">
-					IV Panel Title
+			<div class="leafletPanelArea leftPanelArea">
+				<div class="leafletPanel" style="width: 200px;">
+					<div class="leafletPanelTitle">
+						I Panel Title
+					</div>
+					<div class="leafletPanelContent">
+						-- <br> other <br> left <br> panel <br> content <br> here <br> --<br>
+						<button class="midiBtn clearBtn" title="Открыть панель">Открыть панель</button>
+					</div>
 				</div>
-				<div class="leafletPanelContent">
-					-- <br> other <br> right <br> panel <br> content <br> here <br> --
+				<div></div>
+				<div class="leafletPanel">
+					<div class="leafletPanelTitle">
+						II Panel Title
+					</div>
+					<div class="leafletPanelContent">
+						-- <br> other <br> left <br> panel <br> content <br> here <br> --
+					</div>
+				</div>
+			</div>	
+			<div class="leafletPanelArea rightPanelArea">
+				<div class="leafletPanel">
+					<div class="leafletPanelTitle">
+						III Panel Title
+					</div>
+					<div class="leafletPanelContent">
+						-- <br> right <br> panel <br> content <br> here <br> --
+					</div>
+				</div>
+				<div></div>
+				<div class="leafletPanel">
+					<div class="leafletPanelTitle">
+						IV Panel Title
+					</div>
+					<div class="leafletPanelContent">
+						-- <br> other <br> right <br> panel <br> content <br> here <br> --
+					</div>
+				</div>
+			</div>	
+			<div class="leafletPanelArea topPanelArea">
+				<div class="leafletPanel">
+					-- top --
 				</div>
 			</div>
-    	</div>	
-    	<!-- Simple Leaflet include -->
-    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    	<script src="js/leafletInit.js"></script>
-    	<!-- END Simple Leaflet include -->
-    </body>
+			<div class="leafletOverPanelArea leftOverPanelArea"><!-- add class "showPanel" for open full search panel -->
+				<div class="leftOverPanelHeader">
+					<div class="leftOverPanelTitle">Panel title</div>
+					<div class="leftOverPanelCloseWr">
+						<div class="leftOverPanelCloseBtn"></div>
+					</div>
+				</div>
+				<div class="leftOverPanelBody">
+					-- content --
+				</div>
+			</div>
+		</div>
+		<!-- Simple Leaflet include -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script src="js/leafletInit.js"></script>
+		<!-- END Simple Leaflet include -->
+
+		<script type="text/javascript" src="js/simpe.js"></script>
+	</body>
 </html>
