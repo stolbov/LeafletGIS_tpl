@@ -1,15 +1,23 @@
-html, body, #leafletMap {
+html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
-}
-html, body{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 0px;
 	font-weight: normal;
 	color: #333;
 	overflow: hidden;
+}
+.Block{
+	display: inline-block;
+	font-size: 14px;
+}
+#leafletMap {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
 }
 .miniBtn{
 	display: inline-block;
@@ -22,23 +30,6 @@ html, body{
 	border-radius: 5px;
 	cursor: pointer;
 	transition: 300ms;
-}
-.leafletPreloaderWr{
-	display: block;
-	width: 100%;
-	margin: 10px auto;
-}
-.leafletPreloaderWr:before{
-	content: '';
-	display: block;
-	width: 30px;
-	height: 30px;
-	margin: 10px auto;
-	background-color: #fff;
-	background-size: 25px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: url('/images/preloader_25.gif');
 }
 	.miniBtn:focus{
 		outline: 0;
@@ -63,18 +54,106 @@ html, body{
 	.miniBtn:hover:before{
 		opacity: 1;
 	}
+.midiBtn{
+	display: inline-block;
+	width: 100px;
+	height: 32px;
+	margin: 2px;
+	padding: 0;
+	line-height: 32px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	background-color: #fff;
+	border: 1px solid #666;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 300ms;
+}
+	.midiBtn:focus{
+		outline: 0;
+	}
+	.midiBtn:hover{
+		background-color: #EFEFEF;
+	}
+	.midiBtn:active{
+		background-color: #ddd;
+		border: 1px solid #333;
+	}
+	.midiBtn:before{
+		content: '';
+		display: block;
+		float: left;
+		width: 28px;
+		height: 30px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 14px;
+		opacity: 0.5;
+	}
+	.midiBtn:hover:before{
+		opacity: 0.8;
+	}
+	.midiBtn:active:before{
+		opacity: 1;
+	}
+.leafletPreloaderWr{
+	display: block;
+	width: 100%;
+	margin: 10px auto;
+}
+.leafletPreloaderWr:before{
+	content: '';
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 10px auto;
+	background-color: #fff;
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/images/preloader_25.gif');
+}
+
+.leftBlock{
+	width: 9%;
+	height: 100%;
+}
+.rightBlock{
+	width: 90%;
+	height: 100%;
+}
+.blockSplitter{
+	width: 2px;
+	height: 100%;
+	background-color: #666;
+	cursor: move;
+}
 .leafletPanelArea{
 	position: absolute;
 	z-index: 1000;
 }
+@media screen and (max-width: 600px) {
+	.leafletPanel{
+		display: none !important;
+	}
+}
+.leafletOverPanelArea{
+	position: absolute;
+	z-index: 1100;
+}
 	.leftPanelArea{
 		top: 80px;
-		left: 10px;
+		margin-left: 10px;
 	}
 	.rightPanelArea{
-		top: 100px;
+		top: 55px;
 		right: 10px;
 		text-align: right;
+	}
+	.topPanelArea{
+		top: 0px;
+		margin-left: 30%;
 	}
 		.leafletPanel{
 			display: inline-block;
@@ -99,6 +178,55 @@ html, body{
 		}
 		.rightPanelArea .leafletPanel{
 			text-align: left;
+		}
+		.leafletPanelArea.topPanelArea .leafletPanel{
+			margin-top: 0;
+		}
+	.leftOverPanelArea{
+		display: none;
+		top: 0;
+		width: 380px;
+		height: 100%;
+		background-color: #fff;
+		overflow-y: auto;
+	}
+	.leftOverPanelArea.showPanel{
+		display: block;
+	}
+		.leftOverPanelHeader {
+			padding: 5px;
+		}
+		.leftOverPanelTitle{
+			position: absolute;
+			padding: 5px 0 0 0;
+			font-size: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #bbb;
+		}
+		.leftOverPanelCloseWr {
+			width: 100%;
+			text-align: right;
+		}
+		.leftOverPanelCloseBtn{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('/images/icons/glyphicons_207_remove_2.png');
+			opacity: 0.3;
+			cursor: pointer;
+			transition: 300ms;
+		}
+		.leftOverPanelCloseBtn:hover{
+			opacity: 0.6;
+		}
+		.leftOverPanelCloseBtn:active{
+			opacity: 1;
+		}
+		.leftOverPanelBody{
+			padding: 5px;
 		}
 .leafletSearchWr {
 	top: 0px;
