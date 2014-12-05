@@ -63,6 +63,7 @@ html, body {
 	line-height: 32px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	color: #454545;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #666;
@@ -75,6 +76,7 @@ html, body {
 	}
 	.midiBtn:hover{
 		background-color: #EFEFEF;
+		color: #333;
 	}
 	.midiBtn:active{
 		background-color: #ddd;
