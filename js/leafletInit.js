@@ -19,7 +19,7 @@ var greenIcon = L.icon({
 
 var markerColors = ['redMarker', 'yellowMarker', 'blueMarker'];
 var markerIcons = ['auto', 'star', 'snow'];
-for(var i = 0; i < 1000; i++){
+for(var i = 0; i < 100; i++){
 	var rndX = Math.random() * (57 - 54) + 54,
 		rndY = Math.random() * (48 - 46) + 46;
 	var markerColorNum = Math.floor(Math.random() * (3));

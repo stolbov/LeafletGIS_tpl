@@ -1,0 +1,85 @@
+.vector-marker {
+	width: 35px;
+	height: 46px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	text-align: center;
+}
+.vector-marker path {
+	stroke: black;
+	stroke-opacity: 0.4;
+	stroke-width: 1;
+}
+.vector-marker.not-accepted {
+opacity: 0.5;
+}
+
+.vector-marker-shadow {
+	background: url("https://github.com/hiasinho/Leaflet.vector-markers/blob/master/dist/assets/shadow.png") no-repeat 0 0;
+	width: 36px;
+	height: 16px;
+}
+
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+.vector-marker {
+	background-size: 720px 46px;
+}
+
+.vector-marker-shadow {
+	background-image: url("https://github.com/hiasinho/Leaflet.vector-markers/blob/master/dist/assets/shadow@2x.png");
+	background-size: 54px 51px;
+}
+}
+.vector-marker i {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 32px;
+	color: #333;
+	margin: auto;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.vector-marker .icon-white {
+	color: #fff;
+}
+
+
+
+.leafletMapIcons {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.vector-marker i.leafletMapIcons {
+	top: 3px;
+	height: 32px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+.leafletMapIcons svg {
+margin-top: 5px;
+}
+
+
+i.testIcon{
+	background-image: url('data:image/svg+xml;utf8,<svg height="22px" version="1.1" viewBox="0 0 22 22" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><defs><path d="M10.9849098,17.1363781 L4.18653734,21.9999998 L6.53637275,13.9875387 L0,8.56176179 L7.9498286,8.49334719 L10.9849102,0 L13.9360342,8.56176759 L22,8.56176759 L15.4334469,14.0403266 L17.7832826,22 L10.9849098,17.1363781 L10.9849098,17.1363781 Z" id="path-1"/></defs><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="common_star_favorite_bookmark_glyph"><use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"/><use fill="none" xlink:href="#path-1"/></g></g></svg>');
+}
+
+i.deleteIcon{
+	background-image: url('/images/icons/glyphicons_028_cars.png');
+	background-size: 22px;
+}
+
+.leafletMapIcons.green-icon path {
+	fill: #7E5C5C;
+}

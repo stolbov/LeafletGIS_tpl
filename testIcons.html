@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple template for Leaflet-GIS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/icons.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="map" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%"></div>
+
+		<!-- Simple Leaflet include -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<!-- END Simple Leaflet include -->
+		<script type="text/javascript" src="js/leafletNewIcons.js"></script>
+		<script type="text/javascript">
+			// var map = L.map('Map', {
+			//     maxZoom: 19
+			// }).setView([56.123578,47.239479], 10);
+			// L.tileLayer('http://gwosm.cloudapp.net/osm/{z}/{x}/{y}.png', {
+			//     attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> contributors',
+			//     maxZoom: 19
+			// }).addTo(map);
+
+
+			var map = L.map('map').setView([56.123578,47.239479], 10);
+
+			L.tileLayer('http://gwosm.cloudapp.net/osm/{z}/{x}/{y}.png', {
+			  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+			  detectRetina: true
+			}).addTo(map);
+
+			L.marker([56.123578,47.339479], {icon: L.VectorMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: '#cb4b16', spin: true}) }).addTo(map);
+			L.marker([56.173578,47.139479], {icon: L.VectorMarkers.icon({icon: 'rocket', prefix: 'fa', markerColor: '#eee8d5', iconColor: '#002b36'}) }).addTo(map);
+
+			//icon from class
+			L.marker(
+				[56.053578,47.239479], 
+				{icon: L.VectorMarkers.icon(
+					{
+						markerColor: '#7DF097',
+						iconClass: 'deleteIcon'
+					}
+				)}
+			).addTo(map);
+
+			//icon from png URL
+			L.marker(
+				[56.153578,47.239479], 
+				{icon: L.VectorMarkers.icon(
+					{
+						markerColor: '#6FE2FF',
+						iconUrl: '/images/icons/glyphicons_021_snowflake.png',
+						iconSize: [22,22]
+					}
+				)}
+			).addTo(map);
+
+			//icon from svg class
+			L.marker(
+				[56.173578,47.299479], 
+				{icon: L.VectorMarkers.icon(
+					{
+						markerColor: '#E0E84A',
+						iconClass: 'testIcon'
+					}
+				)}
+			).addTo(map);
+
+			//icon from svg URL
+			L.marker(
+				[56.073578,47.319479], 
+				{icon: L.VectorMarkers.icon(
+					{
+						markerColor: '#DD9E91',
+						iconUrl: '<svg height="15px" version="1.1" viewBox="0 0 22 15" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M0,2.8370491 L0,12.8370491 C0,14.8370491 2,14.8370491 2,14.8370491 L13.9160156,14.8370491 C13.9160156,14.8370491 15.9160156,14.8370491 15.9160156,12.8370491 L15.9160156,2.8370491 C15.9160156,0.837049097 13.9160156,0.837049097 13.9160156,0.837049097 L2,0.837049096 C2,0.837049096 0,0.837049096 0,2.8370491 Z M17.0809326,10.9658333 L22,14.8370491 L22,0.837049096 L17.0809326,4.74361106 L17.0809326,10.9658333 Z" fill="#0D771B"/></svg>'
+					}
+				)}
+			).addTo(map);
+
+			//icon from svg URL and set color
+			L.marker(
+				[56.023578,47.349479], 
+				{icon: L.VectorMarkers.icon(
+					{
+						markerColor: '#4169F3',
+						iconUrl: '<svg height="15px" version="1.1" viewBox="0 0 22 15" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M0,2.8370491 L0,12.8370491 C0,14.8370491 2,14.8370491 2,14.8370491 L13.9160156,14.8370491 C13.9160156,14.8370491 15.9160156,14.8370491 15.9160156,12.8370491 L15.9160156,2.8370491 C15.9160156,0.837049097 13.9160156,0.837049097 13.9160156,0.837049097 L2,0.837049096 C2,0.837049096 0,0.837049096 0,2.8370491 Z M17.0809326,10.9658333 L22,14.8370491 L22,0.837049096 L17.0809326,4.74361106 L17.0809326,10.9658333 Z" fill="{{color}}"/></svg>',
+						iconClass: '_green-icon',
+						iconColor: '#C10FD0'
+					}
+				)}
+			).addTo(map);
+
+
+		</script>
+	</body>
+</html>
