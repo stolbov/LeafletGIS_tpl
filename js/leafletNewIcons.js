@@ -76,7 +76,7 @@
 				if (typeof(options.iconUrl) == 'boolean') {
 					iconClass = options.icon;
 				} else {
-					if (typeof(options.iconUrl) == 'string' && (options.iconUrl.indexOf('svg') + 1)) {
+					if (typeof(options.iconUrl) == 'string' && (options.iconUrl.indexOf('<svg') + 1)) {
 						//iconStyle = 'style="background-image: url(data:image/svg+xml;base64,' + window.btoa(options.iconUrl) + ');"';
 						iconSVG = options.iconUrl.replace(/{{color}}/g, options.iconColor);
 						if (options.iconClass) { iconClass =  options.iconClass; }
